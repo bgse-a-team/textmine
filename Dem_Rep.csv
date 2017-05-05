@@ -1,0 +1,45 @@
+president,Party,Term as President,Vice-President
+Washington,"None, Federalist",1789-1797,John Adams
+Adams,Federalist,1797-1801,Thomas Jefferson
+Jefferson,Democratic-Republican,1801-1809,"Aaron Burr, George Clinton"
+Madison,Democratic-Republican,1809-1817,"George Clinton, Elbridge Gerry"
+Monroe,Democratic-Republican,1817-1825,Daniel Tompkins
+AdamsII,Democratic-Republican,1825-1829,John Calhoun
+Jackson,Democrat,1829-1837,"John Calhoun, Martin van Buren"
+Buren ,Democrat,1837-1841,Richard Johnson
+Harrison,Whig,1841,John Tyler
+Tyler,Whig,1841-1845,0
+Polk,Democrat,1845-1849,George Dallas
+Taylor,Whig,1849-1850,Millard Fillmore
+Fillmore,Whig,1850-1853,0
+Pierce,Democrat,1853-1857,William King
+Buchanan,Democrat,1857-1861,John Breckinridge
+Lincoln,Republican,1861-1865,"Hannibal Hamlin, Andrew Johnson"
+Johnson,National Union,1865-1869,0
+Grant,Republican,1869-1877,Schuyler Colfax
+Hayes,Republican,1877-1881,William Wheeler
+Garfield,Republican,1881,Chester Arthur
+Arthur,Republican,1881-1885,0
+Cleveland,Democrat,1885-1889,Thomas Hendriks
+Harrison,Republican,1889-1893,Levi Morton
+Cleveland,Democrat,1893-1897,Adlai Stevenson
+McKinley,Republican,1897-1901,"Garret Hobart, Theodore Roosevelt"
+RooeveltI,Republican,1901-1909,Charles Fairbanks
+Taft,Republican,1909-1913,James Sherman
+Wilson,Democrat,1913-1921,Thomas Marshall
+Harding,Republican,1921-1923,Calvin Coolidge
+Coolidge,Republican,1923-1929,Charles Dawes
+Hoover,Republican,1929-1933,Charles Curtis
+RooseveltII,Democrat,1933-1945,"John Garner, Henry Wallace, Harry S. Truman"
+Truman,Democrat,1945-1953,Alben Barkley
+Eisenhower,Republican,1953-1961,Richard Milhous Nixon
+Kennedy,Democrat,1961-1963,Lyndon Johnson
+Johnson,Democrat,1963-1969,Hubert Humphrey
+Nixon,Republican,1969-1974,"Spiro Agnew, Gerald R. Ford"
+Ford,Republican,1974-1977,Nelson Rockefeller
+Carter,Democrat,1977-1981,Walter Mondale
+Reagan,Republican,1981-1989,George H. W. Bush
+BushI,Republican,1989-1993,James Danforth (Dan) Quayle
+Clinton,Democrat,1993-2001,Al Gore
+BushII,Republican,2001-2009,Richard Cheney
+Obama,Democrat,2009-2017,Joseph Biden
