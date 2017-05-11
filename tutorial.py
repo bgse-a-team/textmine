@@ -48,7 +48,7 @@ tt = ldaobj.tt_avg()
 ldaobj.dict_print()
 
 data = data.drop('speech', 1)
-for i in xrange(ldaobj.K):
+for i in range(ldaobj.K):
     data['T' + str(i)] = dt[:, i]
 data.to_csv("final_output.csv", index=False)
 
@@ -70,7 +70,7 @@ queryobj.perplexity()
 
 dt_query = queryobj.dt_avg()
 aggdata = pd.DataFrame(dt_query, index=aggspeeches.index,
-                       columns=['T' + str(i) for i in xrange(queryobj.K)])
+                       columns=['T' + str(i) for i in range(queryobj.K)])
 aggdata.to_csv("final_output_agg.csv")
 
 ###############

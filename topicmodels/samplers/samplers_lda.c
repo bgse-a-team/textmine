@@ -1911,10 +1911,9 @@ static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_11topicmodels_8samplers_12sample
 int __pyx_module_is_main_topicmodels__samplers__samplers_lda = 0;
 
 /* Implementation of 'topicmodels.samplers.samplers_lda' */
-static PyObject *__pyx_builtin_xrange;
+static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_ValueError;
-static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
 static PyObject *__pyx_builtin_ImportError;
 static PyObject *__pyx_builtin_enumerate;
@@ -1991,7 +1990,6 @@ static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_tokens[] = "tokens";
 static const char __pyx_k_topics[] = "topics";
 static const char __pyx_k_unpack[] = "unpack";
-static const char __pyx_k_xrange[] = "xrange";
 static const char __pyx_k_asarray[] = "asarray";
 static const char __pyx_k_dt_comp[] = "dt_comp";
 static const char __pyx_k_fortran[] = "fortran";
@@ -2195,7 +2193,6 @@ static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_v;
-static PyObject *__pyx_n_s_xrange;
 static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_docs, __Pyx_memviewslice __pyx_v_tokens, __Pyx_memviewslice __pyx_v_topics, int __pyx_v_N, int __pyx_v_V, int __pyx_v_K, int __pyx_v_D, double __pyx_v_alpha, double __pyx_v_beta, int __pyx_v_burnin, int __pyx_v_thinning, int __pyx_v_samples); /* proto */
 static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_docs, __Pyx_memviewslice __pyx_v_tokens, __Pyx_memviewslice __pyx_v_topics, __Pyx_memviewslice __pyx_v_tt, int __pyx_v_N, int __pyx_v_K, int __pyx_v_D, double __pyx_v_alpha, int __pyx_v_samples); /* proto */
@@ -2349,7 +2346,7 @@ static int __pyx_f_11topicmodels_8samplers_12samplers_lda_multinomial_sample(dou
   /* "topicmodels/samplers/samplers_lda.pyx":61
  *     # uncomment this code to use numpy rather than gsl
  * 
- *     for new_topic in xrange(K):             # <<<<<<<<<<<<<<
+ *     for new_topic in range(K):             # <<<<<<<<<<<<<<
  *         if p[new_topic] > rnd:
  *             break
  */
@@ -2359,7 +2356,7 @@ static int __pyx_f_11topicmodels_8samplers_12samplers_lda_multinomial_sample(dou
 
     /* "topicmodels/samplers/samplers_lda.pyx":62
  * 
- *     for new_topic in xrange(K):
+ *     for new_topic in range(K):
  *         if p[new_topic] > rnd:             # <<<<<<<<<<<<<<
  *             break
  * 
@@ -2368,7 +2365,7 @@ static int __pyx_f_11topicmodels_8samplers_12samplers_lda_multinomial_sample(dou
     if (__pyx_t_7) {
 
       /* "topicmodels/samplers/samplers_lda.pyx":63
- *     for new_topic in xrange(K):
+ *     for new_topic in range(K):
  *         if p[new_topic] > rnd:
  *             break             # <<<<<<<<<<<<<<
  * 
@@ -2378,7 +2375,7 @@ static int __pyx_f_11topicmodels_8samplers_12samplers_lda_multinomial_sample(dou
 
       /* "topicmodels/samplers/samplers_lda.pyx":62
  * 
- *     for new_topic in xrange(K):
+ *     for new_topic in range(K):
  *         if p[new_topic] > rnd:             # <<<<<<<<<<<<<<
  *             break
  * 
@@ -2882,7 +2879,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
   /* "topicmodels/samplers/samplers_lda.pyx":104
  *     #initialize topic counts
  * 
- *     for i in xrange(N):             # <<<<<<<<<<<<<<
+ *     for i in range(N):             # <<<<<<<<<<<<<<
  *         tok_topic_mat[tokens[i], topics[i]] += 1
  *         doc_topic_mat[docs[i], topics[i]] += 1
  */
@@ -2892,7 +2889,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
 
     /* "topicmodels/samplers/samplers_lda.pyx":105
  * 
- *     for i in xrange(N):
+ *     for i in range(N):
  *         tok_topic_mat[tokens[i], topics[i]] += 1             # <<<<<<<<<<<<<<
  *         doc_topic_mat[docs[i], topics[i]] += 1
  * 
@@ -2904,7 +2901,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
     *((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=1 */ ((char *) (((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_tok_topic_mat.data + __pyx_t_12 * __pyx_v_tok_topic_mat.strides[0]) )) + __pyx_t_13)) )) += 1;
 
     /* "topicmodels/samplers/samplers_lda.pyx":106
- *     for i in xrange(N):
+ *     for i in range(N):
  *         tok_topic_mat[tokens[i], topics[i]] += 1
  *         doc_topic_mat[docs[i], topics[i]] += 1             # <<<<<<<<<<<<<<
  * 
@@ -2957,7 +2954,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
  * 
  *     while iter < maxiter:             # <<<<<<<<<<<<<<
  * 
- *         for i in xrange(N):
+ *         for i in range(N):
  */
   while (1) {
     __pyx_t_7 = ((__pyx_v_iter < __pyx_v_maxiter) != 0);
@@ -2966,7 +2963,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
     /* "topicmodels/samplers/samplers_lda.pyx":112
  *     while iter < maxiter:
  * 
- *         for i in xrange(N):             # <<<<<<<<<<<<<<
+ *         for i in range(N):             # <<<<<<<<<<<<<<
  * 
  *             token = tokens[i]
  */
@@ -2975,7 +2972,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
       __pyx_v_i = __pyx_t_9;
 
       /* "topicmodels/samplers/samplers_lda.pyx":114
- *         for i in xrange(N):
+ *         for i in range(N):
  * 
  *             token = tokens[i]             # <<<<<<<<<<<<<<
  *             doc = docs[i]
@@ -3030,7 +3027,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
  *             tok_topic_agg[old_topic] -= 1
  *             doc_topic_mat[doc, old_topic] -= 1             # <<<<<<<<<<<<<<
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  */
       __pyx_t_24 = __pyx_v_doc;
       __pyx_t_25 = __pyx_v_old_topic;
@@ -3039,7 +3036,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
       /* "topicmodels/samplers/samplers_lda.pyx":123
  *             doc_topic_mat[doc, old_topic] -= 1
  * 
- *             for j in xrange(K):             # <<<<<<<<<<<<<<
+ *             for j in range(K):             # <<<<<<<<<<<<<<
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
  */
@@ -3049,20 +3046,20 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
 
         /* "topicmodels/samplers/samplers_lda.pyx":124
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \             # <<<<<<<<<<<<<<
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  */
         __pyx_t_28 = __pyx_v_token;
         __pyx_t_29 = __pyx_v_j;
         __pyx_t_30 = ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=1 */ ((char *) (((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_tok_topic_mat.data + __pyx_t_28 * __pyx_v_tok_topic_mat.strides[0]) )) + __pyx_t_29)) ))) + __pyx_v_beta);
 
         /* "topicmodels/samplers/samplers_lda.pyx":125
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)             # <<<<<<<<<<<<<<
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  *                 p[j] += p[j-1]
  */
         __pyx_t_31 = __pyx_v_j;
@@ -3070,10 +3067,10 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
 
         /* "topicmodels/samplers/samplers_lda.pyx":124
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \             # <<<<<<<<<<<<<<
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  */
         if (unlikely(__pyx_t_32 == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
@@ -3081,10 +3078,10 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
         }
 
         /* "topicmodels/samplers/samplers_lda.pyx":125
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)             # <<<<<<<<<<<<<<
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  *                 p[j] += p[j-1]
  */
         __pyx_t_33 = __pyx_v_doc;
@@ -3092,10 +3089,10 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
 
         /* "topicmodels/samplers/samplers_lda.pyx":124
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \             # <<<<<<<<<<<<<<
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  */
         (__pyx_v_p[__pyx_v_j]) = ((__pyx_t_30 / __pyx_t_32) * ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=1 */ ((char *) (((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_doc_topic_mat.data + __pyx_t_33 * __pyx_v_doc_topic_mat.strides[0]) )) + __pyx_t_34)) ))) + __pyx_v_alpha));
       }
@@ -3103,7 +3100,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
       /* "topicmodels/samplers/samplers_lda.pyx":126
  *                 p[j] = (tok_topic_mat[token, j] + beta) / \
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):             # <<<<<<<<<<<<<<
+ *             for j in range(1,K):             # <<<<<<<<<<<<<<
  *                 p[j] += p[j-1]
  * 
  */
@@ -3113,7 +3110,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_sampler(CYTHON_
 
         /* "topicmodels/samplers/samplers_lda.pyx":127
  *                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  *                 p[j] += p[j-1]             # <<<<<<<<<<<<<<
  * 
  *             new_topic = multinomial_sample(p, K)
@@ -3633,7 +3630,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
   /* "topicmodels/samplers/samplers_lda.pyx":168
  *     #initialize topic counts
  * 
- *     for i in xrange(N):             # <<<<<<<<<<<<<<
+ *     for i in range(N):             # <<<<<<<<<<<<<<
  *         doc_topic_mat[docs[i], topics[i]] += 1
  * 
  */
@@ -3643,7 +3640,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
 
     /* "topicmodels/samplers/samplers_lda.pyx":169
  * 
- *     for i in xrange(N):
+ *     for i in range(N):
  *         doc_topic_mat[docs[i], topics[i]] += 1             # <<<<<<<<<<<<<<
  * 
  *     while sample < samples:
@@ -3660,7 +3657,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
  * 
  *     while sample < samples:             # <<<<<<<<<<<<<<
  * 
- *         for i in xrange(N):
+ *         for i in range(N):
  */
   while (1) {
     __pyx_t_12 = ((__pyx_v_sample < __pyx_v_samples) != 0);
@@ -3669,7 +3666,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
     /* "topicmodels/samplers/samplers_lda.pyx":173
  *     while sample < samples:
  * 
- *         for i in xrange(N):             # <<<<<<<<<<<<<<
+ *         for i in range(N):             # <<<<<<<<<<<<<<
  * 
  *             token = tokens[i]
  */
@@ -3678,7 +3675,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
       __pyx_v_i = __pyx_t_7;
 
       /* "topicmodels/samplers/samplers_lda.pyx":175
- *         for i in xrange(N):
+ *         for i in range(N):
  * 
  *             token = tokens[i]             # <<<<<<<<<<<<<<
  *             doc = docs[i]
@@ -3712,7 +3709,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
  * 
  *             doc_topic_mat[doc, old_topic] -= 1             # <<<<<<<<<<<<<<
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  */
       __pyx_t_16 = __pyx_v_doc;
       __pyx_t_17 = __pyx_v_old_topic;
@@ -3721,9 +3718,9 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
       /* "topicmodels/samplers/samplers_lda.pyx":182
  *             doc_topic_mat[doc, old_topic] -= 1
  * 
- *             for j in xrange(K):             # <<<<<<<<<<<<<<
+ *             for j in range(K):             # <<<<<<<<<<<<<<
  *                 p[j] = tt[token, j] * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  */
       __pyx_t_18 = __pyx_v_K;
       for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
@@ -3731,9 +3728,9 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
 
         /* "topicmodels/samplers/samplers_lda.pyx":183
  * 
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = tt[token, j] * (doc_topic_mat[doc, j] + alpha)             # <<<<<<<<<<<<<<
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  *                 p[j] += p[j-1]
  */
         __pyx_t_20 = __pyx_v_token;
@@ -3744,9 +3741,9 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
       }
 
       /* "topicmodels/samplers/samplers_lda.pyx":184
- *             for j in xrange(K):
+ *             for j in range(K):
  *                 p[j] = tt[token, j] * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):             # <<<<<<<<<<<<<<
+ *             for j in range(1,K):             # <<<<<<<<<<<<<<
  *                 p[j] += p[j-1]
  * 
  */
@@ -3756,7 +3753,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_2sampler_query(
 
         /* "topicmodels/samplers/samplers_lda.pyx":185
  *                 p[j] = tt[token, j] * (doc_topic_mat[doc, j] + alpha)
- *             for j in xrange(1,K):
+ *             for j in range(1,K):
  *                 p[j] += p[j-1]             # <<<<<<<<<<<<<<
  * 
  *             new_topic = multinomial_sample(p, K)
@@ -4181,7 +4178,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
   /* "topicmodels/samplers/samplers_lda.pyx":212
  *     cdef int i, v, k
  * 
- *     for i in xrange(N):             # <<<<<<<<<<<<<<
+ *     for i in range(N):             # <<<<<<<<<<<<<<
  *         tok_topic_mat[tokens[i], topics[i]] += 1
  * 
  */
@@ -4191,7 +4188,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
 
     /* "topicmodels/samplers/samplers_lda.pyx":213
  * 
- *     for i in xrange(N):
+ *     for i in range(N):
  *         tok_topic_mat[tokens[i], topics[i]] += 1             # <<<<<<<<<<<<<<
  * 
  *     tok_topic_agg = np.sum(tok_topic_mat, axis=0)
@@ -4208,7 +4205,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
  * 
  *     tok_topic_agg = np.sum(tok_topic_mat, axis=0)             # <<<<<<<<<<<<<<
  * 
- *     for v in xrange(V):
+ *     for v in range(V):
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -4241,8 +4238,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
   /* "topicmodels/samplers/samplers_lda.pyx":217
  *     tok_topic_agg = np.sum(tok_topic_mat, axis=0)
  * 
- *     for v in xrange(V):             # <<<<<<<<<<<<<<
- *         for k in xrange(K):
+ *     for v in range(V):             # <<<<<<<<<<<<<<
+ *         for k in range(K):
  *             tt[v, k] = (tok_topic_mat[v, k] + beta) / \
  */
   __pyx_t_8 = __pyx_v_V;
@@ -4251,8 +4248,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
 
     /* "topicmodels/samplers/samplers_lda.pyx":218
  * 
- *     for v in xrange(V):
- *         for k in xrange(K):             # <<<<<<<<<<<<<<
+ *     for v in range(V):
+ *         for k in range(K):             # <<<<<<<<<<<<<<
  *             tt[v, k] = (tok_topic_mat[v, k] + beta) / \
  *                        (tok_topic_agg[k] + V*beta)
  */
@@ -4261,8 +4258,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
       __pyx_v_k = __pyx_t_15;
 
       /* "topicmodels/samplers/samplers_lda.pyx":219
- *     for v in xrange(V):
- *         for k in xrange(K):
+ *     for v in range(V):
+ *         for k in range(K):
  *             tt[v, k] = (tok_topic_mat[v, k] + beta) / \             # <<<<<<<<<<<<<<
  *                        (tok_topic_agg[k] + V*beta)
  * 
@@ -4272,7 +4269,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
       __pyx_t_18 = ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=1 */ ((char *) (((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_tok_topic_mat.data + __pyx_t_16 * __pyx_v_tok_topic_mat.strides[0]) )) + __pyx_t_17)) ))) + __pyx_v_beta);
 
       /* "topicmodels/samplers/samplers_lda.pyx":220
- *         for k in xrange(K):
+ *         for k in range(K):
  *             tt[v, k] = (tok_topic_mat[v, k] + beta) / \
  *                        (tok_topic_agg[k] + V*beta)             # <<<<<<<<<<<<<<
  * 
@@ -4282,8 +4279,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_4tt_comp(CYTHON
       __pyx_t_20 = ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_tok_topic_agg.data + __pyx_t_19 * __pyx_v_tok_topic_agg.strides[0]) ))) + (__pyx_v_V * __pyx_v_beta));
 
       /* "topicmodels/samplers/samplers_lda.pyx":219
- *     for v in xrange(V):
- *         for k in xrange(K):
+ *     for v in range(V):
+ *         for k in range(K):
  *             tt[v, k] = (tok_topic_mat[v, k] + beta) / \             # <<<<<<<<<<<<<<
  *                        (tok_topic_agg[k] + V*beta)
  * 
@@ -4666,7 +4663,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
   /* "topicmodels/samplers/samplers_lda.pyx":237
  *     cdef int i, d, k
  * 
- *     for i in xrange(N):             # <<<<<<<<<<<<<<
+ *     for i in range(N):             # <<<<<<<<<<<<<<
  *         doc_topic_mat[docs[i], topics[i]] += 1
  * 
  */
@@ -4676,7 +4673,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
 
     /* "topicmodels/samplers/samplers_lda.pyx":238
  * 
- *     for i in xrange(N):
+ *     for i in range(N):
  *         doc_topic_mat[docs[i], topics[i]] += 1             # <<<<<<<<<<<<<<
  * 
  *     doc_topic_agg = np.sum(doc_topic_mat, axis=1)
@@ -4693,7 +4690,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
  * 
  *     doc_topic_agg = np.sum(doc_topic_mat, axis=1)             # <<<<<<<<<<<<<<
  * 
- *     for d in xrange(D):
+ *     for d in range(D):
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 240, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -4726,8 +4723,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
   /* "topicmodels/samplers/samplers_lda.pyx":242
  *     doc_topic_agg = np.sum(doc_topic_mat, axis=1)
  * 
- *     for d in xrange(D):             # <<<<<<<<<<<<<<
- *         for k in xrange(K):
+ *     for d in range(D):             # <<<<<<<<<<<<<<
+ *         for k in range(K):
  *             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \
  */
   __pyx_t_8 = __pyx_v_D;
@@ -4736,8 +4733,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
 
     /* "topicmodels/samplers/samplers_lda.pyx":243
  * 
- *     for d in xrange(D):
- *         for k in xrange(K):             # <<<<<<<<<<<<<<
+ *     for d in range(D):
+ *         for k in range(K):             # <<<<<<<<<<<<<<
  *             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \
  *                        (doc_topic_agg[d] + K*alpha)
  */
@@ -4746,8 +4743,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
       __pyx_v_k = __pyx_t_15;
 
       /* "topicmodels/samplers/samplers_lda.pyx":244
- *     for d in xrange(D):
- *         for k in xrange(K):
+ *     for d in range(D):
+ *         for k in range(K):
  *             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \             # <<<<<<<<<<<<<<
  *                        (doc_topic_agg[d] + K*alpha)
  * 
@@ -4757,7 +4754,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
       __pyx_t_18 = ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=1 */ ((char *) (((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_doc_topic_mat.data + __pyx_t_16 * __pyx_v_doc_topic_mat.strides[0]) )) + __pyx_t_17)) ))) + __pyx_v_alpha);
 
       /* "topicmodels/samplers/samplers_lda.pyx":245
- *         for k in xrange(K):
+ *         for k in range(K):
  *             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \
  *                        (doc_topic_agg[d] + K*alpha)             # <<<<<<<<<<<<<<
  * 
@@ -4767,8 +4764,8 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_6dt_comp(CYTHON
       __pyx_t_20 = ((*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_doc_topic_agg.data + __pyx_t_19 * __pyx_v_doc_topic_agg.strides[0]) ))) + (__pyx_v_K * __pyx_v_alpha));
 
       /* "topicmodels/samplers/samplers_lda.pyx":244
- *     for d in xrange(D):
- *         for k in xrange(K):
+ *     for d in range(D):
+ *         for k in range(K):
  *             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \             # <<<<<<<<<<<<<<
  *                        (doc_topic_agg[d] + K*alpha)
  * 
@@ -5070,7 +5067,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
   /* "topicmodels/samplers/samplers_lda.pyx":264
  *     cdef int n, k, s
  * 
- *     for s in xrange(samples):             # <<<<<<<<<<<<<<
+ *     for s in range(samples):             # <<<<<<<<<<<<<<
  * 
  *         px = np.zeros(N, dtype=FTYPE)
  */
@@ -5079,11 +5076,11 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
     __pyx_v_s = __pyx_t_7;
 
     /* "topicmodels/samplers/samplers_lda.pyx":266
- *     for s in xrange(samples):
+ *     for s in range(samples):
  * 
  *         px = np.zeros(N, dtype=FTYPE)             # <<<<<<<<<<<<<<
  * 
- *         for n in xrange(N):
+ *         for n in range(N):
  */
     __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -5119,7 +5116,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
     /* "topicmodels/samplers/samplers_lda.pyx":268
  *         px = np.zeros(N, dtype=FTYPE)
  * 
- *         for n in xrange(N):             # <<<<<<<<<<<<<<
+ *         for n in range(N):             # <<<<<<<<<<<<<<
  * 
  *             doc_index = docs[n]
  */
@@ -5128,7 +5125,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
       __pyx_v_n = __pyx_t_9;
 
       /* "topicmodels/samplers/samplers_lda.pyx":270
- *         for n in xrange(N):
+ *         for n in range(N):
  * 
  *             doc_index = docs[n]             # <<<<<<<<<<<<<<
  *             token_index = tokens[n]
@@ -5142,7 +5139,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
  *             doc_index = docs[n]
  *             token_index = tokens[n]             # <<<<<<<<<<<<<<
  * 
- *             for k in xrange(K):
+ *             for k in range(K):
  */
       __pyx_t_11 = __pyx_v_n;
       __pyx_v_token_index = (*((__pyx_t_11topicmodels_8samplers_12samplers_lda_DTYPE_t *) ( /* dim=0 */ (__pyx_v_tokens.data + __pyx_t_11 * __pyx_v_tokens.strides[0]) )));
@@ -5150,7 +5147,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
       /* "topicmodels/samplers/samplers_lda.pyx":273
  *             token_index = tokens[n]
  * 
- *             for k in xrange(K):             # <<<<<<<<<<<<<<
+ *             for k in range(K):             # <<<<<<<<<<<<<<
  *                 px[n] = px[n] + tt[token_index, k, s]*dt[doc_index, k, s]
  * 
  */
@@ -5160,7 +5157,7 @@ static PyObject *__pyx_pf_11topicmodels_8samplers_12samplers_lda_8perplexity_com
 
         /* "topicmodels/samplers/samplers_lda.pyx":274
  * 
- *             for k in xrange(K):
+ *             for k in range(K):
  *                 px[n] = px[n] + tt[token_index, k, s]*dt[doc_index, k, s]             # <<<<<<<<<<<<<<
  * 
  *         px = np.log(px)
@@ -20458,19 +20455,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_v, __pyx_k_v, sizeof(__pyx_k_v), 0, 0, 1, 1},
-  {&__pyx_n_s_xrange, __pyx_k_xrange, sizeof(__pyx_k_xrange), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 61, __pyx_L1_error)
-  #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 61, __pyx_L1_error)
-  #endif
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 61, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 218, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(1, 231, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 799, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 989, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(2, 149, __pyx_L1_error)

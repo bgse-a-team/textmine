@@ -58,7 +58,7 @@ cdef int multinomial_sample( double* p, int K ):
     cdef double rnd = np.random.random_sample()*p[K-1]
     # uncomment this code to use numpy rather than gsl
 
-    for new_topic in xrange(K):
+    for new_topic in range(K):
         if p[new_topic] > rnd:
             break
 
@@ -101,7 +101,7 @@ def sampler(DTYPE_t [:] docs, DTYPE_t [:] tokens, DTYPE_t [:] topics,
 
     #initialize topic counts
 
-    for i in xrange(N):
+    for i in range(N):
         tok_topic_mat[tokens[i], topics[i]] += 1
         doc_topic_mat[docs[i], topics[i]] += 1
 
@@ -109,7 +109,7 @@ def sampler(DTYPE_t [:] docs, DTYPE_t [:] tokens, DTYPE_t [:] topics,
 
     while iter < maxiter:
 
-        for i in xrange(N):
+        for i in range(N):
 
             token = tokens[i]
             doc = docs[i]
@@ -120,10 +120,10 @@ def sampler(DTYPE_t [:] docs, DTYPE_t [:] tokens, DTYPE_t [:] topics,
             tok_topic_agg[old_topic] -= 1
             doc_topic_mat[doc, old_topic] -= 1
 
-            for j in xrange(K):
+            for j in range(K):
                 p[j] = (tok_topic_mat[token, j] + beta) / \
                        (tok_topic_agg[j] + beta*V) * (doc_topic_mat[doc, j] + alpha)
-            for j in xrange(1,K):
+            for j in range(1,K):
                 p[j] += p[j-1]
 
             new_topic = multinomial_sample(p, K)
@@ -165,12 +165,12 @@ def sampler_query(DTYPE_t [:] docs, DTYPE_t [:] tokens,
 
     #initialize topic counts
 
-    for i in xrange(N):
+    for i in range(N):
         doc_topic_mat[docs[i], topics[i]] += 1
 
     while sample < samples:
 
-        for i in xrange(N):
+        for i in range(N):
 
             token = tokens[i]
             doc = docs[i]
@@ -179,9 +179,9 @@ def sampler_query(DTYPE_t [:] docs, DTYPE_t [:] tokens,
 
             doc_topic_mat[doc, old_topic] -= 1
 
-            for j in xrange(K):
+            for j in range(K):
                 p[j] = tt[token, j] * (doc_topic_mat[doc, j] + alpha)
-            for j in xrange(1,K):
+            for j in range(1,K):
                 p[j] += p[j-1]
 
             new_topic = multinomial_sample(p, K)
@@ -209,13 +209,13 @@ def tt_comp(DTYPE_t [:] tokens, DTYPE_t [:] topics,
     cdef FTYPE_t [:, ::1] tt = np.zeros((V, K), dtype=FTYPE)
     cdef int i, v, k
 
-    for i in xrange(N):
+    for i in range(N):
         tok_topic_mat[tokens[i], topics[i]] += 1
 
     tok_topic_agg = np.sum(tok_topic_mat, axis=0)
 
-    for v in xrange(V):
-        for k in xrange(K):
+    for v in range(V):
+        for k in range(K):
             tt[v, k] = (tok_topic_mat[v, k] + beta) / \
                        (tok_topic_agg[k] + V*beta)
 
@@ -234,13 +234,13 @@ def dt_comp(DTYPE_t [:] docs, DTYPE_t [:] topics,
     cdef FTYPE_t [:, ::1] dt = np.zeros((D, K), dtype=FTYPE)
     cdef int i, d, k
 
-    for i in xrange(N):
+    for i in range(N):
         doc_topic_mat[docs[i], topics[i]] += 1
 
     doc_topic_agg = np.sum(doc_topic_mat, axis=1)
 
-    for d in xrange(D):
-        for k in xrange(K):
+    for d in range(D):
+        for k in range(K):
             dt[d, k] = (doc_topic_mat[d, k] + alpha) / \
                        (doc_topic_agg[d] + K*alpha)
 
@@ -261,16 +261,16 @@ def perplexity_comp(DTYPE_t [:] docs, DTYPE_t [:] tokens,
     cdef int doc_index, token_index
     cdef int n, k, s
 
-    for s in xrange(samples):
+    for s in range(samples):
 
         px = np.zeros(N, dtype=FTYPE)
 
-        for n in xrange(N):
+        for n in range(N):
 
             doc_index = docs[n]
             token_index = tokens[n]
 
-            for k in xrange(K):
+            for k in range(K):
                 px[n] = px[n] + tt[token_index, k, s]*dt[doc_index, k, s]
 
         px = np.log(px)

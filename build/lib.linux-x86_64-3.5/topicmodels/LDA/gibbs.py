@@ -148,7 +148,7 @@ class LDAGibbs():
         samples = sampled_topics.shape[0]
         dt = np.zeros((self.D, self.K, samples))
 
-        for s in xrange(samples):
+        for s in range(samples):
                 dt[:, :, s] = \
                     samplers_lda.dt_comp(self.docid, sampled_topics[s, :],
                                          self.N, self.K, self.D, self.alpha)
@@ -164,7 +164,7 @@ class LDAGibbs():
         samples = sampled_topics.shape[0]
         tt = np.zeros((self.V, self.K, samples))
 
-        for s in xrange(samples):
+        for s in range(samples):
             tt[:, :, s] = \
                 samplers_lda.tt_comp(self.tokens, sampled_topics[s, :],
                                      self.N, self.V, self.K, self.beta)
@@ -182,7 +182,7 @@ class LDAGibbs():
 
         tt = self.tt_avg(False)
 
-        for t in xrange(self.K):
+        for t in range(self.K):
             top_word_indices = tt[:, t].argsort()[-W:][::-1]
             topic_top_probs.append(np.round(np.sort(tt[:, t])[-W:][::-1], 3))
             topic_top_words.append([self.token_key.keys()
@@ -190,7 +190,7 @@ class LDAGibbs():
                                    for i in top_word_indices])
 
         with codecs.open(output_file, "w", "utf-8") as f:
-            for t in xrange(self.K):
+            for t in range(self.K):
                 words = ','.join(topic_top_words[t])
                 probs = ','.join([str(i) for i in topic_top_probs[t]])
                 f.write("topic" + str(t) + ',')
@@ -308,7 +308,7 @@ run self.dendrogram(data=tt[1,:,:])')
 
         tt = data.T
 
-        for t in xrange(self.K):
+        for t in range(self.K):
             top_word_indices = tt[:, t].argsort()[-3:][::-1]
             topic_top_words.append([self.token_key.keys()
                                    [self.token_key.values().index(i)]
@@ -397,7 +397,7 @@ class QueryGibbs():
         self.sampled_topics = np.zeros((self.samples, self.N),
                                        dtype=np.int)
 
-        for s in xrange(self.samples):
+        for s in range(self.samples):
 
             self.sampled_topics[s, :] = \
                 samplers_lda.sampler_query(self.docid, self.tokens,
@@ -412,7 +412,7 @@ class QueryGibbs():
 
         self.dt = np.zeros((self.D, self.K, self.samples))
 
-        for s in xrange(self.samples):
+        for s in range(self.samples):
             self.dt[:, :, s] = \
                samplers_lda.dt_comp(self.docid, self.sampled_topics[s, :],
                                     self.N, self.K, self.D, self.alpha)
